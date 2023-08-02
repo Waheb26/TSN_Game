@@ -91,7 +91,7 @@ function EditViewerForm() {
       <Header />
       <div>
         <NavLink to="/adminpage" className="back-button">
-          back
+          Back
         </NavLink>
       </div>
       <div className="edit-viewer-form-container">
