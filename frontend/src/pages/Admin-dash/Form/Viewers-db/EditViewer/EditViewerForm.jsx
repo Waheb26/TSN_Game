@@ -124,6 +124,14 @@ function EditViewerForm() {
             <label htmlFor="username" className="edit-viewer-label">
               Username:
             </label>
+            <input
+              id="username"
+              type="text"
+              className="input-evf"
+              name="username"
+              value={viewerData.username}
+              onChange={handleChange}
+            />
             <p className="viewer-data-username">{viewerData.username}</p>
           </div>
           <br />
@@ -131,6 +139,14 @@ function EditViewerForm() {
             <label htmlFor="email" className="edit-viewer-label">
               Email:
             </label>
+            <input
+              id="email"
+              type="email"
+              className="input-evf"
+              name="email"
+              value={viewerData.email}
+              onChange={handleChange}
+            />
             <p className="viewer-data-email">{viewerData.email}</p>
           </div>
           <br />
