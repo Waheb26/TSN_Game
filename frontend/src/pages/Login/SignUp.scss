@@ -10,8 +10,8 @@
   border-radius: 5px;
   margin-left: 10dvw;
   margin-right: 10dvw;
-  margin-top: 8dvh;
-  margin-bottom: 10dvh;
+  margin-top: 6.5dvh;
+  margin-bottom: 9dvh;
   text-align: center;
 }
 .title {
@@ -23,7 +23,7 @@
   background-image: var(--logo-color-gradient-dt);
   background-clip: text;
   -webkit-background-clip: text; // prise en charge des navigateurs WebKit
-  font-size: 1.5em;
+  font-size: 5.5dvw;
   text-align: center;
 }
 
@@ -46,10 +46,11 @@
   border-bottom: 0.2dvh solid var(--color-yellow);
   background: none;
   padding: 2dvh;
-  font-weight: 700;
-  font-size: larger;
+  font-size: 4.5dvw;
+  font-family: var(--text-font);
+  font-weight: bold;
   text-align: center;
-  width: 75%;
+  width: 87%;
 }
 
 .signup-input:active,
@@ -58,51 +59,67 @@
   outline: none;
 }
 .signup-submit {
-  font-size: 1.5dvh;
+  font-size: 3.5dvw;
   margin-top: 2dvh;
-  padding: 2dvh 2dvh;
+  padding: 1dvh 1dvw;
   border-radius: 26px;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 60%;
+  background-color: rgb(246, 246, 239);
   color: var(--color-blue);
   cursor: pointer;
   border: none;
   position: relative;
 }
+
 .signup-input::placeholder {
-  color: var(--color-yellow);
-  font-size: 0.7em;
+  color: rgb(195, 195, 188);
+  font-style: italic;
+  font-family: var(--text-font);
+  font-size: 4dvw;
 }
+
 .button-text {
   padding: 5px;
 }
+
 .button.signup-submit {
   margin-top: 5dvh;
   padding: 0.7dvh;
-  margin-bottom: 5dvh;
+  margin-bottom: 2dvh;
 }
+
 .button div {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 800;
   font-size: 0.8em;
 }
+
 form.signup {
   width: 50dvw;
   margin-top: -20%;
   font-size: large;
 }
+
 .login:hover {
   color: var(--a-hover);
 }
+
 .login:active {
   color: var(--a-active);
 }
+
 a.login {
   color: var(--color-2scd-2);
+}
+
+.Asterix {
+  font-size: 2.5dvw;
+  color: rgb(216, 218, 227);
 }
 
 @media screen and (min-width: 600px) {
@@ -114,21 +131,27 @@ a.login {
     height: 75dvh;
     padding-top: 10dvh;
   }
+
+  .signup-input {
+    width: 90%;
+    font-size: 1dvw;
+  }
+
   .signup-submit {
-    width: 25%;
+    width: 15%;
+    font-size: 0.8dvw;
   }
   a.login {
-    font-size: 1.5em;
+    font-size: 1dvw;
   }
   .title {
     font-size: 2dvw;
     margin-bottom: 5dvh;
   }
   .signup-input::placeholder {
-    font-size: 1em;
+    font-size: 1dvw;
   }
   .signup-field {
-    margin-bottom: 2dvh;
   }
 }
 @media screen and (min-width: 1981px) {

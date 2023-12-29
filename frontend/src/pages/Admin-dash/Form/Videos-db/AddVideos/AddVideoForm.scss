@@ -58,9 +58,15 @@
 }
 
 .add-video-form-container button {
-  width: 60%;
+  width: 50%;
   padding: 2%;
   border-radius: 5px;
+  font-size: 4dvw;
+}
+
+.add-video-form-container button:hover {
+  background-color: rgb(60, 148, 60);
+  color: white;
 }
 
 .add-video-form-container input::placeholder {
@@ -97,6 +103,10 @@
   }
   a.back-button {
     font-size: 2.5dvw;
+  }
+  .add-video-form-container button {
+    width: 15%;
+    font-size: 1dvw;
   }
 }
 @media screen and (min-width: 1900px) {

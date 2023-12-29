@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.33, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.34, for Linux (x86_64)
 --
 -- Host: localhost    Database: mydb
 -- ------------------------------------------------------
--- Server version	8.0.33-0ubuntu0.22.04.2-0ubuntu0.22.04.2
+-- Server version	8.0.34-0ubuntu0.22.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -52,7 +52,7 @@ CREATE TABLE `photo` (
   `description` varchar(255) DEFAULT NULL,
   `imageSrc` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,7 +61,7 @@ CREATE TABLE `photo` (
 
 LOCK TABLES `photo` WRITE;
 /*!40000 ALTER TABLE `photo` DISABLE KEYS */;
-INSERT INTO `photo` VALUES (1,'call of duty','gameplay de jeux de tir','/image/fort2.jpg'),(2,'Cyber Punk','gameplay RPG','/image/fifa1.png'),(3,'Cyber Punk','gameplay RPG','/image/cod4.png'),(4,'call of duty','gameplay de jeux de tir','/image/cod2.jpg');
+INSERT INTO `photo` VALUES (1,'call of duty','gameplay de jeux de tir','/image/fort2.jpg'),(2,'Cyber Punk','gameplay RPG','/image/fifa1.png'),(3,'Cyber Punk','gameplay RPG','/image/cod4.png'),(4,'call of duty','gameplay de jeux de tir','/image/cod2.jpg'),(5,'cssgo6','gameplay de RPG','/image/csgo6.jpg');
 /*!40000 ALTER TABLE `photo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,10 +79,10 @@ CREATE TABLE `video` (
   `description` varchar(255) DEFAULT NULL,
   `publicationDate` varchar(255) DEFAULT NULL,
   `isFavorite` tinyint DEFAULT NULL,
-  `isAccessible` tinyint NULL,
+  `isAccessible` tinyint DEFAULT NULL,
   `videoData` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,19 +91,7 @@ CREATE TABLE `video` (
 
 LOCK TABLES `video` WRITE;
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
-/*!40000 ALTER TABLE `video` ENABLE KEYS */;
-INSERT INTO `video` VALUES (1,'The World Is In Danger',9,'call Of video 1','2023-07-10',0,1,'/videos/video1.mp4'),(2,'You Can Do It !',10,'call Of video 2','2023-07-10',0,1,'/videos/video2.mp4'),(3,'Always Troubles',10,'call Of video 3','2023-07-10',0,1,'/videos/video3.mp4'),(4,'The Last Chance',10,'call Of video 4','2023-07-10',0,1,'/videos/video4.mp4'),(5,'CyberPunck Rise',10,'call Of video 5','2023-07-10',0,1,'/videos/video5.mp4'),(6,'Ghost Danger',5,'Starwars 1','2023-07-19',0,1,'/videos/video6.mp4'),(7,'Back To The Future',8,'Starwars 2','2023-07-19',0,1,'/videos/video7.mp4'),(8,'Dark Side',10,'Starwars 3','2023-07-19',0,1,'/videos/video8.mp4'),(9,'Winter Is Coming',10,'Starwars 4','2023-07-19',0,1,'/videos/video9.mp4'),(10,'Never Give Up',10,'Starwars 5','2023-07-19',0,1,'/videos/video10.mp4'),(11,'Cyberpucnk 2077',7,'premier_test','2023-06-14',0,1,'/videos/Cyberpunck_2077_court_circuit.mp4'),(12,'Cyberpucnk Panam in trouble',11,'second_test','2023-06-15',0,1,'/videos/Cyberpunck_2077_Panam_in_trouble.mp4'),
-(13,'Starting the Adventure!',11,'second_test','2023-06-15',0,1,'/videos/video11.mp4'),
-(14,'Exploring the Open World',11,'second_test','2023-06-15',0,1,'/videos/video12.mp4'),
-(15,'A Deep Dive into the Lore ',11,'second_test','2023-06-15',0,1,'/videos/video13.mp4'),
-(16,'Discovering Hidden Easter Eggs',11,'second_test','2023-06-15',0,1,'/videos/video14.mp4'),
-(17,'The Impact of Hell',11,'second_test','2023-06-15',0,1,'/videos/video15.mp4'),
-(18,'The Art of battle',11,'second_test','2023-06-15',0,1,'/videos/video16.mp4'),
-(19,'The Beast Mods ',11,'second_test','2023-06-15',0,1,'/videos/video17.mp4'),
-(20,'Breaking Down the Storyline ',11,'second_test','2023-06-15',0,1,'/videos/video18.mp4'),
-(21,'Building the Ultimate',11,'second_test','2023-06-15',0,1,'/videos/video19.mp4'),
-(22,'Breaking Barriers: The Fastest',11,'second_test','2023-06-15',0,1,'/videos/video20.mp4'),
-(23,'Inside the Mind of a Speedrunner',11,'second_test','2023-06-15',0,1,'/videos/video21.mp4');
+INSERT INTO `video` VALUES (1,'The World Is In Danger',9,'call Of video 1','2023-07-10',0,1,'/videos/video1.mp4'),(2,'You Can Do It !',10,'call Of video 2','2023-07-10',0,1,'/videos/video2.mp4'),(3,'Always Troubles',10,'call Of video 3','2023-07-10',0,1,'/videos/video3.mp4'),(4,'The Last Chance',10,'call Of video 4','2023-07-10',0,1,'/videos/video4.mp4'),(5,'CyberPunck Rise',10,'call Of video 5','2023-07-10',0,1,'/videos/video5.mp4'),(6,'Ghost Danger',5,'Starwars 1','2023-07-19',0,1,'/videos/video6.mp4'),(7,'Back To The Future',8,'Starwars 2','2023-07-19',0,1,'/videos/video7.mp4'),(8,'Dark Side',10,'Starwars 3','2023-07-19',0,1,'/videos/video8.mp4'),(9,'Winter Is Coming',10,'Starwars 4','2023-07-19',0,1,'/videos/video9.mp4'),(10,'Never Give Up',10,'Starwars 5','2023-07-19',0,1,'/videos/video10.mp4'),(11,'Cyberpucnk 2077',7,'premier_test','2023-06-14',0,1,'/videos/Cyberpucnk_2077_court_circuit.mp4'),(12,'Cyberpucnk Panam in trouble',11,'second_test','2023-06-15',0,1,'/videos/Cyberpucnk_2077_Panam_in_trouble.mp4'),(13,'Starting the Adventure!',11,'second_test','2023-06-15',0,1,'/videos/video11.mp4'),(14,'Exploring the Open World',11,'second_test','2023-06-15',0,1,'/videos/video12.mp4'),(15,'A Deep Dive into the Lore ',11,'second_test','2023-06-15',0,1,'/videos/video13.mp4'),(16,'Discovering Hidden Easter Eggs',11,'second_test','2023-06-15',0,1,'/videos/video14.mp4'),(17,'The Impact of Hell',11,'second_test','2023-06-15',0,1,'/videos/video15.mp4'),(18,'The Art of battle',11,'second_test','2023-06-15',0,1,'/videos/video16.mp4'),(19,'The Beast Mods ',11,'second_test','2023-06-15',0,1,'/videos/video17.mp4'),(20,'Breaking Down the Storyline ',11,'second_test','2023-06-15',0,1,'/videos/video18.mp4'),(21,'Building the Ultimate',11,'second_test','2023-06-15',0,1,'/videos/video19.mp4'),(22,'Breaking Barriers: The Fastest',11,'second_test','2023-06-15',0,1,'/videos/video20.mp4'),(23,'Inside the Mind of a Speedrunner',11,'second_test','2023-06-15',0,1,'/videos/video21.mp4');
 /*!40000 ALTER TABLE `video` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,12 +114,12 @@ CREATE TABLE `videoCat` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `video_has_category`
+-- Dumping data for table `videoCat`
 --
 
 LOCK TABLES `videoCat` WRITE;
 /*!40000 ALTER TABLE `videoCat` DISABLE KEYS */;
-INSERT INTO `videoCat` VALUES (1,1),(2,3),(3,4),(4,8),(5,2),(6,2),(7,7),(8,6),(9,5),(10,4),(11,8),(12,1),(13,10),(14,13),(15,9),(16,7),(17,13),(18,12),(19,10),(20,11),(21,14),(22,12),(23,10),(24,9),(25,6),(26,7);
+INSERT INTO `videoCat` VALUES (1,1),(12,1),(5,2),(6,2),(2,3),(3,4),(10,4),(9,5),(8,6),(7,7),(16,7),(4,8),(11,8),(15,9),(13,10),(19,10),(20,11),(18,12),(22,12),(14,13),(17,13),(21,14);
 /*!40000 ALTER TABLE `videoCat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,7 +142,7 @@ CREATE TABLE `videoViewer` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `video_has_viewer`
+-- Dumping data for table `videoViewer`
 --
 
 LOCK TABLES `videoViewer` WRITE;
@@ -179,7 +167,7 @@ CREATE TABLE `viewer` (
   `hashedPassword` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -188,7 +176,7 @@ CREATE TABLE `viewer` (
 
 LOCK TABLES `viewer` WRITE;
 /*!40000 ALTER TABLE `viewer` DISABLE KEYS */;
-INSERT INTO `viewer` VALUES (1,'awesomeAdmin','awesomeAdmin@tsn.game',1980-05-31,1,1,'$argon2id$v=19$m=65536,t=5,p=1$37YVG6kc1L5bf3hFCasIMw$FKcS9dONHbdlKTGl8FVTK8YTaVtbs08TN0ZlyAEuQTE');
+INSERT INTO `viewer` VALUES (1,'Admin','awesomeAdmin@tsn.game',1980-05-31,1,1,'$argon2id$v=19$m=65536,t=5,p=1$37YVG6kc1L5bf3hFCasIMw$FKcS9dONHbdlKTGl8FVTK8YTaVtbs08TN0ZlyAEuQTE');
 /*!40000 ALTER TABLE `viewer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -201,4 +189,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-12 15:29:37
+-- Dump completed on 2023-12-05 17:39:19

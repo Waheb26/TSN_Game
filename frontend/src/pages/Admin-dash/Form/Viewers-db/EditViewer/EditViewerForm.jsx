@@ -33,10 +33,13 @@ function EditViewerForm() {
     isFavorite: "",
     isAdmin: "",
   });
-
   useEffect(() => {
     const fetchViewerData = async () => {
       try {
+        if (viewerId === "1") {
+          console.error("You cannot fetch the viewer 1");
+          return;
+        }
         const response = await fetch(
           `${import.meta.env.VITE_BACKEND_URL}/viewers/${viewerId}`,
           {
@@ -45,10 +48,6 @@ function EditViewerForm() {
         );
         const data = await response.json();
         setViewerData(data);
-        //  => ({
-        //   ...prevData,
-        //   ...data,
-        // }));
       } catch (error) {
         console.error("Error fetching viewer data:", error);
       }
@@ -59,9 +58,13 @@ function EditViewerForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (viewerId === "1") {
+      console.error("You cannot edit the viewer 1");
+      return;
+    }
     try {
       await fetch(`${import.meta.env.VITE_BACKEND_URL}/viewers/${viewerId}`, {
-        method: "PUT",
+        method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
@@ -97,7 +100,7 @@ function EditViewerForm() {
       <div className="edit-viewer-form-container">
         <h1 className="edit-viewer-form-title">Edit Viewer</h1>
         <form
-          method="PUT"
+          method="PATCH"
           encType="multipart/form-data"
           action={`${import.meta.env.VITE_BACKEND_URL}/viewers/${viewerId}`}
           className="edit-viewer-form"
@@ -132,7 +135,6 @@ function EditViewerForm() {
               value={viewerData.username}
               onChange={handleChange}
             />
-            <p className="viewer-data-username">{viewerData.username}</p>
           </div>
           <br />
           <div className="email-section">
@@ -147,7 +149,6 @@ function EditViewerForm() {
               value={viewerData.email}
               onChange={handleChange}
             />
-            <p className="viewer-data-email">{viewerData.email}</p>
           </div>
           <br />
           <div className="birthday-section">

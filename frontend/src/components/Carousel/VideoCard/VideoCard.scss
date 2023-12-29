@@ -24,27 +24,30 @@
   width: 40dvw;
   height: 100%;
   border-radius: 5px;
-  border: 2px solid;
+  border: 2px solid black;
 }
+
 .video.video:hover {
   width: 40dvw;
-  border: 4px solid;
+  border: 2px solid black;
 }
+
 .video-card.hovered video::-webkit-media-control-menu-play-button {
   display: initial !important;
 }
+
 .video-card.hovered video {
   cursor: pointer;
 }
+
 .card-title {
   margin-top: 1dvh;
-  font-size: 3.5dvw;
+  font-size: 3.3dvw;
   font-family: var(--video-title-font);
-  word-wrap: break-word;
-  word-break: break-all;
   color: var(--color-2scd-2);
   text-align: center;
 }
+
 .video {
   width: 100dvw;
   height: 100%;

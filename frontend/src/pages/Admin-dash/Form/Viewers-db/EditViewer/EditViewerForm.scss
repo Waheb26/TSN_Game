@@ -35,10 +35,18 @@
 }
 
 .edit-viewer-form-container button {
-  width: 60%;
+  width: 50%;
   padding: 2%;
   border-radius: 5px;
+  background-color: rgb(201, 197, 197);
+  font-size: 4dvw;
 }
+
+.edit-viewer-form-container button:hover {
+  background-color: rgb(82, 158, 82);
+  color: white;
+}
+
 .edit-viewer-form-container input::placeholder {
   color: #804582;
   font-size: 14px;
@@ -67,6 +75,13 @@ form.edit-viewer-form {
   text-align: center;
   font-size: 5dvw;
 }
+
+.email-section,
+.birthday-section,
+.username-section {
+  margin-left: 4dvw;
+}
+
 .is-Admin-section {
   display: flex;
 }
@@ -77,6 +92,11 @@ input#viewerId.viewer-id-input {
 @media screen and (min-width: 600px) {
   .edit-viewer-form-title {
     font-size: 2.5dvw;
+  }
+
+  .edit-viewer-form-container button {
+    width: 15%;
+    font-size: 1dvw;
   }
 }
 @media screen and (min-width: 1400px) {

@@ -47,14 +47,28 @@
 }
 
 .edit-video-form-container button {
-  width: 60%;
+  width: 50%;
   padding: 2%;
   border-radius: 5px;
+  background-color: rgb(215, 214, 214);
+  font-size: 4dvw;
+}
+
+.edit-video-form-container button:hover {
+  background-color: rgb(71, 140, 71);
+  color: white;
 }
 
 .edit-video-form-container input::placeholder {
   color: var(--color-admin-page);
   font-size: 14px;
+}
+
+.title-section,
+.time-section,
+.description-section,
+.publication-date-section {
+  margin-left: 7dvw;
 }
 
 .back-button {
@@ -76,6 +90,12 @@ form.edit-video-form {
 @media screen and (min-width: 600px) {
   .edit-video-form-title {
     font-size: 3dvw;
+  }
+
+  .edit-video-form-container button {
+    font-size: 1dvw;
+    width: 20%;
+    height: auto;
   }
 
   .Update {

@@ -19,16 +19,15 @@ class ViewerManager extends AbstractManager {
     );
   }
 
-  update(viewer) {
+  patch(viewer) {
     return this.database.query(
-      `UPDATE ${this.table} SET username=?, email=?, birthday=?, isFavorite=?, isAdmin=? , hashedPassword =? WHERE id=?`,
+      `UPDATE ${this.table} SET username=?, email=?, birthday=?, isFavorite=?, isAdmin=? WHERE id=?`,
       [
         viewer.username,
         viewer.email,
         viewer.birthday,
         viewer.isFavorite,
         viewer.isAdmin,
-        viewer.hashedPassword,
         viewer.id,
       ]
     );

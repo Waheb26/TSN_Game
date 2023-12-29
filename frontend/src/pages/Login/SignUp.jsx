@@ -15,12 +15,13 @@ toastr.options = {
   onclick: null,
   showDuration: "200",
   hideDuration: "500",
-  timeOut: "3000",
+  timeOut: "6000",
   extendedTimeOut: "1000",
   showEasing: "swing",
   hideEasing: "linear",
   showMethod: "fadeIn",
   hideMethod: "fadeOut",
+  escapeHtml: true,
 };
 
 export default function SignUp() {
@@ -28,8 +29,21 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
   const navigate = useNavigate();
+  const passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
+  const handleTogglePasswordVisibility = () => {
+    setPasswordVisible((prevVisible) => !prevVisible);
+  };
+  const handleToggleConfirmPasswordVisibility = () => {
+    setConfirmPasswordVisible((prevVisible) => !prevVisible);
+  };
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -42,6 +56,13 @@ export default function SignUp() {
       toastr.info("Password and password confirmation don't match.");
       return;
     }
+    if (!passwordRegex.test(password)) {
+      toastr.info(
+        "Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters long."
+      );
+      return;
+    }
+
     try {
       const res = await fetch(
         `${
@@ -82,6 +103,7 @@ export default function SignUp() {
             <input
               type="text"
               className="signup-input"
+              id="username"
               value={username}
               placeholder="Username"
               required
@@ -92,6 +114,7 @@ export default function SignUp() {
             <input
               type="email"
               className="signup-input"
+              id="email"
               value={email}
               placeholder="Email"
               required
@@ -100,23 +123,68 @@ export default function SignUp() {
           </div>
           <div className="signup-field">
             <input
-              type="password"
+              type={passwordVisible ? "text" : "password"}
+              id="password"
               className="signup-input"
               value={password}
-              placeholder="password"
+              placeholder="Password"
               required
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handlePasswordChange}
             />
+            <button
+              type="button"
+              className="toggle-password"
+              onClick={handleTogglePasswordVisibility}
+            >
+              {passwordVisible ? (
+                <img
+                  src="/assets/hidePassword.png"
+                  alt="Hide Password"
+                  height="20"
+                  width="20"
+                />
+              ) : (
+                <img
+                  src="/assets/showPassword.png"
+                  alt="Show Password"
+                  height="20"
+                  width="20"
+                />
+              )}
+            </button>
           </div>
           <div className="signup-field">
             <input
-              type="password"
+              type={confirmPasswordVisible ? "text" : "password"}
+              id="password"
               className="signup-input"
               value={confirmPassword}
               required
               placeholder="Password confirmation"
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
+            <button
+              type="button"
+              className="toggle-password"
+              onClick={handleToggleConfirmPasswordVisibility}
+            >
+              {confirmPasswordVisible ? (
+                <img
+                  src="/assets/hidePassword.png"
+                  alt="Hide Password"
+                  height="20"
+                  width="20"
+                />
+              ) : (
+                // <i className="fas fa-eye" />
+                <img
+                  src="/assets/showPassword.png"
+                  alt="Show Password"
+                  height="20"
+                  width="20"
+                />
+              )}
+            </button>
           </div>
           <button
             type="submit"

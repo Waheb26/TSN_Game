@@ -7,10 +7,19 @@ export function AuthProvider({ children, initialToken }) {
   const [token, setToken] = useState(initialToken || "");
   const [isAdmin, setIsAdmin] = useState(false);
   const isAuthenticated = !!token;
+  const [user, setUser] = useState(null);
 
   const cachedValue = useMemo(
-    () => ({ token, setToken, isAdmin, setIsAdmin, isAuthenticated }),
-    [token, isAdmin, isAuthenticated]
+    () => ({
+      token,
+      setToken,
+      isAdmin,
+      setIsAdmin,
+      isAuthenticated,
+      user,
+      setUser,
+    }),
+    [token, isAdmin, isAuthenticated, user, setUser]
   );
 
   return (
@@ -19,9 +28,24 @@ export function AuthProvider({ children, initialToken }) {
 }
 
 export function useAuth() {
-  const { token, setToken, isAdmin, setIsAdmin, isAuthenticated } =
-    useContext(AuthContext);
-  return { token, setToken, isAdmin, setIsAdmin, isAuthenticated };
+  const {
+    token,
+    setToken,
+    isAdmin,
+    setIsAdmin,
+    isAuthenticated,
+    user,
+    setUser,
+  } = useContext(AuthContext);
+  return {
+    token,
+    setToken,
+    isAdmin,
+    setIsAdmin,
+    isAuthenticated,
+    user,
+    setUser,
+  };
 }
 
 AuthProvider.propTypes = {

@@ -127,7 +127,7 @@ function EditVideoForm() {
           <input
             id="videoId"
             type="number"
-            placeholder="Enter the id of the video to edit"
+            placeholder="Enter the id of the video"
             value={videoId}
             className="video-id-input input-evf"
             onChange={handleVideoIdChange}

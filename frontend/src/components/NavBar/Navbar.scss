@@ -1,16 +1,16 @@
 .logo {
-  width: 22dvh;
+  width: 40dvw;
   height: auto;
   margin-top: 1dvh;
 }
 
 .log-btn {
   button {
-    margin-right: 2%;
+    margin-right: 3%;
     background-color: var(--color-green-dt);
     position: fixed;
     right: 0;
-    top: 2;
+    top: 2dvh;
   }
 }
 /* #root > div > div.Header > header > div > div > span > div > div > button {
@@ -39,13 +39,24 @@ body > div:nth-child(3) > div > ul {
   display: flex;
 }
 .admin-dash-link {
-  text-decoration: none;
-  color: var(--color-green-dt);
-  position: relative;
-  top: 5dvh;
-  right: -12dvw;
+  width: 9dvw;
+  height: auto;
+  margin-top: 0.1dvh;
+  margin-left: 38dvw;
 }
 /*======Style link======*/
+
+span.username-home {
+  color: rgb(170, 160, 49);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: black;
+  position: fixed;
+  width: 15dvw;
+  border-radius: 10dvw;
+  margin-top: 5.5dvh;
+  right: -1dvw;
+  padding: 0dvh 3dvw;
+}
 
 .dropdown {
   top: 2%;
@@ -79,13 +90,22 @@ body > div:nth-child(3) > div > ul {
     height: 64px;
   }
   .logo {
-    width: 18dvw;
+    width: 15dvw;
     height: auto;
   }
 
+  .log-btn {
+    button {
+      margin-right: 1dvw;
+      background-color: var(--color-green-dt);
+      position: fixed;
+      margin-top: -1.5dvh;
+    }
+  }
+
   body > div:nth-child(3) > div > ul {
-    top: 1dvh;
-    left: 1dvw;
+    top: -10dvh;
+    left: 70dvw;
     width: 7dvw;
     height: 4dvh;
   }
@@ -97,10 +117,17 @@ body > div:nth-child(3) > div > ul {
   }
 
   .admin-dash-link {
-    position: relative;
-    top: 3dvh;
-    left: 46dvw;
-    font-size: 1.4dvw;
+    width: 2.5dvw;
+    height: auto;
+    margin-top: 1dvh;
+    margin-left: 75dvw;
+  }
+
+  span.username-home {
+    font-size: 1.2dvw;
+    margin-top: 6dvh;
+    right: -13dvw;
+    background-color: #0d0108;
   }
 }
 @media screen and (min-width: 1900px) {

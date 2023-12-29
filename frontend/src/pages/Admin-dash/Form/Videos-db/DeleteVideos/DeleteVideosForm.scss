@@ -36,8 +36,9 @@
 }
 
 .delete-video-form > label {
-  padding-top: 5dvh;
-  padding-bottom: -1dvh;
+  margin-left: 8dvw;
+  padding-top: 1dvh;
+  padding-bottom: 1dvh;
 }
 
 .delete-video-form-title {
@@ -55,14 +56,21 @@
 }
 
 .delete-video-form-container button {
-  width: 60%;
+  width: 50%;
   padding: 2%;
   border-radius: 5px;
+  background-color: rgb(216, 214, 214);
+  font-size: 4dvw;
+}
+
+.delete-video-form-container button:hover {
+  background-color: rgb(174, 83, 83);
+  color: white;
 }
 
 .delete-video-form-container input::placeholder {
   color: var(--color-admin-page);
-  font-size: 14px; /* Réduire la taille de la police pour les placeholders */
+  font-size: 4dvw;
 }
 
 .back-button {
@@ -80,6 +88,13 @@
 @media screen and (min-width: 600px) {
   .delete-video-form-title {
     font-size: 2.5dvw;
+  }
+  .delete-video-form-container button {
+    width: 15%;
+    font-size: 1dvw;
+  }
+  .delete-video-form-container input::placeholder {
+    font-size: 1dvw;
   }
 }
 @media screen and (min-width: 1900px) {

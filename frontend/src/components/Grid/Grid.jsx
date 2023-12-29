@@ -8,7 +8,7 @@ function Grid() {
   const { isAuthenticated } = useAuth();
   const [videos, setVideos] = useState([]);
   const [videoPlus, setVideoPlus] = useState(4);
-  const videoToLoad = 15;
+  const videoToLoad = 23;
 
   useEffect(() => {
     async function fetchVideos() {

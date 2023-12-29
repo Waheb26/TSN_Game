@@ -48,7 +48,7 @@ const ApiCalls = {
       return photos;
     } catch (error) {
       console.error(
-        "Erreur lors de la récupération des vidéos depuis la base de données:",
+        "Erreur lors de la récupération des photos depuis la base de données:",
         error
       );
       return [];

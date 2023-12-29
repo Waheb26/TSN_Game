@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import toastr from "toastr";
 import { authFetch } from "../../../../../utilities/utils";
@@ -24,15 +24,40 @@ toastr.options = {
 };
 function DeleteVideosForm() {
   const [videoId, setVideoId] = useState("");
-
+  const [videoData, setVideoData] = useState({
+    title: "",
+    time: "",
+    description: "",
+    publicationDate: "",
+  });
   //   const inputRef = useRef(null);
-  //   const [data, setData] = useState({
-  //     title: "",
-  //     time: "",
-  //     description: "",
-  //     publicationDate: "",
-  //     videoData: null,
-  //   });
+  /* const [data, setData] = useState({
+       title: "",
+       time: "",
+       description: "",
+       publicationDate: "",
+       videoData: null,
+     }); */
+
+  useEffect(() => {
+    const fetchVideoData = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_BACKEND_URL}/videos/${videoId}`,
+          {
+            method: "GET",
+          }
+        );
+        const data = await response.json();
+        setVideoData(data);
+      } catch (error) {
+        console.error("Error fetching video data", error);
+      }
+    };
+
+    fetchVideoData();
+  }, [videoId]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
   };
@@ -80,6 +105,19 @@ function DeleteVideosForm() {
             value={videoId}
             onChange={handleVideoIdChange}
           />
+          <label htmlFor="title" className="delete-video-label">
+            Title:
+            <input
+              className="input-avf"
+              id="title"
+              placeholder="Titre"
+              type="text"
+              name="title"
+              required
+              value={videoData.title}
+              onChange={handleVideoIdChange}
+            />
+          </label>
           <button type="submit" onClick={handleDelete}>
             Delete video
           </button>

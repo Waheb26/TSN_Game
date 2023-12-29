@@ -93,7 +93,7 @@ router.put("/photos/:id", photoControllers.edit);
 router.post("/photos", photoControllers.add);
 router.delete("/photos/:id", photoControllers.destroy);
 
-router.put("/viewers/:id", hashPassword, viewerControllers.edit);
+router.patch("/viewers/:id", hashPassword, viewerControllers.edit);
 router.delete("/viewers/:id", verifyToken, viewerControllers.destroy);
 
 router.put("/videos/:id", verifyToken, videoControllers.edit);

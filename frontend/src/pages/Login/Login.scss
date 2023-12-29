@@ -10,7 +10,7 @@
   border-radius: 5px;
   margin-left: 10dvw;
   margin-right: 10dvw;
-  margin-top: 13dvh;
+  margin-top: 8dvh;
   margin-bottom: 13dvh;
   text-align: center;
 
@@ -49,9 +49,10 @@
   border-bottom: 0.2dvh solid var(--color-yellow);
   background: none;
   padding: 2dvh;
-  font-weight: 700;
-  font-size: larger;
-  width: 75%;
+  font-size: 4.5dvw;
+  font-family: var(--text-font);
+  font-weight: bold;
+  width: 40dvw;
   text-align: center;
 }
 .login-input:active,
@@ -60,7 +61,7 @@
   outline: none;
 }
 .login-submit {
-  font-size: 1.5dvh;
+  font-size: 3.5dvw;
   margin-top: 2dvh;
   padding: 2dvh 2dvh;
   border-radius: 26px;
@@ -70,13 +71,15 @@
   justify-content: center;
   width: 100%;
   color: var(--color-blue);
+  background-color: rgb(241, 241, 237);
   cursor: pointer;
   border: none;
   position: relative;
 }
 .login-input::placeholder {
-  color: var(--color-yellow);
-  font-size: 0.7em;
+  color: rgb(203, 203, 190);
+  font-size: 4dvw;
+  font-style: italic;
 }
 .button-text {
   padding: 5px;
@@ -116,21 +119,36 @@ a.subscribe:active {
     margin-right: 30dvw;
     margin-top: 10dvh;
     margin-bottom: 18dvh;
-    height: 65dvh;
+    height: 70dvh;
     .title {
       font-size: 2em;
-      padding-top: 5dvh;
+      padding-top: 10dvh;
     }
   }
   .login-submit {
-    width: 50%;
+    width: 30%;
+    font-size: 0.8dvw;
+  }
+
+  .login-input {
+    width: 20dvw;
+    font-size: 1dvw;
+  }
+
+  .login-input::placeholder {
+    font-size: 1dvw;
+  }
+
+  #root > div > div > form > div:nth-child(3) > button {
+    margin-right: 1.2dvw;
+    margin-top: 1dvh;
   }
 }
 @media screen and (min-width: 1981px) {
   .login-container {
     margin-top: 10vh;
     margin-bottom: 8dvh;
-    height: 65dvh;
+    height: 80dvh;
     .title {
       font-size: 3em;
       padding-top: 5dvh;

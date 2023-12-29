@@ -13,6 +13,7 @@ function ProfileMenu() {
   const handleLogout = () => {
     removeToken();
     setToken("");
+    window.location.reload(true);
     navigate("/");
   };
 

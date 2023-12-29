@@ -19,19 +19,19 @@
 }
 
 .logo-link-od img {
-  width: 30px;
-  height: 30px;
+  width: 7dvw;
+  height: auto;
   max-width: 100%;
 }
 
 .logo-link-emg img {
-  width: 80px;
-  height: 30px;
+  width: 20dvw;
+  height: auto;
   max-width: 100%;
 }
 .logo-link-linkedin img {
-  width: 30px;
-  height: 30px;
+  width: 5.5dvw;
+  height: auto;
   max-width: 100%;
 }
 .link {
@@ -50,33 +50,48 @@ a.privacy-menu-link {
 
 @media screen and (min-width: 600px) {
   .foot {
-    height: 25dvh;
+    height: 30dvh;
   }
 
   .link {
-    gap: 0.5em;
-    font-size: 0.3em;
-    justify-content: space-between;
+    gap: 1dvw;
+    font-size: 2dvw;
   }
 
   .logo-link-od img {
-    width: 60px;
-    height: 60px;
+    width: 2dvw;
+    height: auto;
     max-width: 100%;
   }
 
   .logo-link-emg img {
-    width: 130px;
-    height: 60px;
+    width: 6dvw;
+    height: auto;
     max-width: 100%;
   }
   .logo-link-linkedin img {
-    width: 60px;
-    height: 60px;
+    width: 2dvw;
+    height: auto;
     max-width: 100%;
   }
 
   .privacy-menu-link {
     color: var(--logo-color-gradient-dt);
+    font-size: 1.2dvw;
+  }
+
+  .terms-menu-link {
+    font-size: 1.2dvw;
+  }
+
+  .all-right {
+    font-size: 1.2dvw;
+  }
+
+  .logo-link {
+    margin-bottom: 3dvh;
+    display: flex;
+    justify-content: center;
+    gap: 10dvw;
   }
 }

@@ -32,7 +32,7 @@ const edit = (req, res) => {
   const viewerId = parseInt(req.params.id, 10);
   const viewerData = req.body;
   models.viewer
-    .update(viewerData, viewerId)
+    .patch(viewerData, viewerId)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
